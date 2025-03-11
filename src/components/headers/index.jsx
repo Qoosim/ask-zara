@@ -7,11 +7,7 @@ export const Headers = () => {
     <>
       <nav className="flex justify-between items-center px-[2rem] py-[1rem]">
         <NavLink to="/">
-          <img
-            src="/public/assets/askzaralogo.png"
-            alt="Logo"
-            className="w-[6rem]"
-          />
+          <img src="/assets/askzaralogo.png" alt="Logo" className="w-[6rem]" />
         </NavLink>
         <ul className="flex justify-center items-center gap-6">
           {tabTexts.map((nav) => (
@@ -19,9 +15,11 @@ export const Headers = () => {
               to={nav.url}
               key={nav.id}
               className={({ isActive }) =>
-                isActive
-                  ? `border-b border-[#ff6f61] text-[#ff6f61]`
-                  : `hover:text-[#ff6f61]`
+                `font-montserrat text-[0.9rem] ${
+                  isActive
+                    ? `border-b border-[#ff6f61] text-[#ff6f61]`
+                    : `hover:text-[#ff6f61]`
+                }`
               }
             >
               <li>{nav.text}</li>
