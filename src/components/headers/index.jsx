@@ -5,7 +5,7 @@ import { NavLink } from "react-router-dom";
 export const Headers = () => {
   return (
     <>
-      <nav className="flex justify-between items-center px-[2rem] py-[1rem]">
+      <nav className="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-[2rem] py-[1rem] bg-[#f6f5dd]">
         <NavLink to="/">
           <img
             src="/assets/askzaralogo.png"
