@@ -1,9 +1,10 @@
 import React from "react";
+import { MentalHealthSupport } from "./__components/MentalHealthSupport";
 
 export const Home = () => {
   return (
     <>
-      <div className="pt-[5rem] text-center">Home Page</div>
+      <MentalHealthSupport />
     </>
   );
 };

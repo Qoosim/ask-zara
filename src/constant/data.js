@@ -20,12 +20,12 @@ export const tabTexts = [
       url: "/chat",
     },
     {
-      id: 1,
+      id: 5,
       text: "Therapist & Doctor",
       url: "/therapist",
     },
     {
-      id: 1,
+      id: 6,
       text: "Support Group",
       url: "/support",
     },
