@@ -1,6 +1,12 @@
 import { faShieldHeart } from "@fortawesome/free-solid-svg-icons";
 import { faCircleCheck } from "@fortawesome/free-solid-svg-icons";
 import { faUserGroup } from "@fortawesome/free-solid-svg-icons";
+import { faFaceFrown } from "@fortawesome/free-solid-svg-icons";
+import { faFaceFrownOpen } from "@fortawesome/free-solid-svg-icons";
+import { faFaceSmileBeam } from "@fortawesome/free-solid-svg-icons";
+import { faFaceSmile } from "@fortawesome/free-solid-svg-icons";
+
+
 
 export const tabTexts = [
     {
@@ -56,5 +62,40 @@ export const cardComponentInfo = [
     title: "Peer and Professional Support",
     text: "Connect with others who understand what you’re going through for additional guidance.",
     color: "others"
+  }
+]
+
+export const moodInfo = [
+  {
+    id: 1,
+    greeting: "Hey there! 👋",
+    feeling: "How are you feeling today?",
+    img: faFaceFrown,
+    expression: "I'm Feeling Sad",
+    color: "blue"
+  },
+  {
+    id: 2,
+    greeting: "Hey there! 👋",
+    feeling: "How are you feeling today?",
+    img: faFaceFrownOpen,
+    expression: "I'm Feeling Anxious",
+    color: "pink"
+  },
+  {
+    id: 3,
+    greeting: "Hey there! 👋",
+    feeling: "How are you feeling today?",
+    img: faFaceSmileBeam,
+    expression: "I'm Feeling Okay",
+    color: "green"
+  },
+  {
+    id: 4,
+    greeting: "Hey there! 👋",
+    feeling: "How are you feeling today?",
+    img: faFaceSmile,
+    expression: "I'm Feeling Happy",
+    color: "yellow"
   }
 ]
