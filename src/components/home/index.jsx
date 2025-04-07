@@ -2,6 +2,9 @@ import React from "react";
 import { MentalHealthSupport } from "./_components/MentalHealthSupport";
 import { SupportMentalHealth } from "./_components/SupportMentalHealth";
 import { MoodSelectComponent } from "./_components/MoodSelectComponent";
+import { TipsComponent } from "./_components/TipsComponent";
+import { TherapistDoctor } from "./_components/TherapistDoctor";
+import { ReviewComponent } from "./_components/ReviewComponent";
 
 export const Home = () => {
   return (
@@ -9,6 +12,9 @@ export const Home = () => {
       <MentalHealthSupport />
       <SupportMentalHealth />
       <MoodSelectComponent />
+      <TipsComponent />
+      <TherapistDoctor />
+      <ReviewComponent />
     </div>
   );
 };

@@ -5,8 +5,8 @@ import { faFaceFrown } from "@fortawesome/free-solid-svg-icons";
 import { faFaceFrownOpen } from "@fortawesome/free-solid-svg-icons";
 import { faFaceSmileBeam } from "@fortawesome/free-solid-svg-icons";
 import { faFaceSmile } from "@fortawesome/free-solid-svg-icons";
-
-
+import { faStar } from "@fortawesome/free-solid-svg-icons";
+import { faStarWh}
 
 export const tabTexts = [
     {
@@ -97,5 +97,52 @@ export const moodInfo = [
     img: faFaceSmile,
     expression: "I'm Feeling Happy",
     color: "yellow"
+  }
+]
+
+export const tipsData = [
+  {
+    id: 1,
+    img: "/assets/stress.jpg",
+    title: "All You Need To Know About Coping with Academic Stress",
+    content: "Discover the most effective strategies for managing academic pressure and maintaining your mental well-being.",
+  },
+  {
+    id: 2,
+    img: "/assets/habit.jpg",
+    title: "Building Healthy Habits for Student Life",
+    content: "Learn how to create and maintain healthy habits that support your mental and physical health throughout your university journey.",
+  },
+  {
+    id: 3,
+    img: "/assets/anxiety.jpg",
+    title: "Understanding Anxiety: Signs and Solutions",
+    content: "Explore the common signs of anxiety and discover practical solutions to help you cope and thrive in your daily life.",
+  },
+  {
+    id: 4,
+    img: "/assets/selfcare.jpg",
+    title: "The Importance of Self-Care for Students",
+    content: "Find out the significance of self-care and learn easy ways to incorporate it into your busy student schedule for improved well-being.",
+  },
+]
+
+export const reviewsData = [
+  {
+    id: 1,
+    img: "/assets/review1.jpg",
+    title: "Tayo",
+    star: faStar,
+    msg: "Ask Zara has been a lifesaver for me. The live chat feature is comforting, and having someone to talk to, even anonymously, has really helped me manage my stress. It’s like having a friend who listens without judgment."
+  },
+  {
+    id: 2,
+    img: "/assets/review2.jpg",
+    title: "Chidimma",
+    star: faStar,
+    msg: "I never thought mental health support could be so accessible. Ask Zara’s resources have been so helpful—I always find something that resonates with me, whether it’s an article or a conversation with a counselor. This platform is truly a blessing."
+  },
+  {
+    id: 3,
   }
 ]
