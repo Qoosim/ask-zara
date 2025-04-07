@@ -6,7 +6,7 @@ import { faFaceFrownOpen } from "@fortawesome/free-solid-svg-icons";
 import { faFaceSmileBeam } from "@fortawesome/free-solid-svg-icons";
 import { faFaceSmile } from "@fortawesome/free-solid-svg-icons";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
-import { faStarWh}
+
 
 export const tabTexts = [
     {
@@ -127,7 +127,7 @@ export const tipsData = [
   },
 ]
 
-export const reviewsData = [
+export const reviewData = [
   {
     id: 1,
     img: "/assets/review1.jpg",
@@ -144,5 +144,30 @@ export const reviewsData = [
   },
   {
     id: 3,
+    img: "/assets/review3.jpg",
+    title: "Emmanuel",
+    star: faStar,
+    msg: "The support group has made a huge difference in my life. Talking to other students who understand what I’m going through has helped me feel less alone. Ask Zara has created a real community, and I’m grateful to be part of it."
+  },
+  {
+    id: 4,
+    img: "/assets/review4.jpg",
+    title: "Adetunji",
+    star: faStar,
+    msg: "Ask Zara is a game-changer! Being able to choose my mood before chatting is incredible—it really personalizes the experience and makes me feel understood. I’ve learned so much about myself just by using this platform."
+  },
+  {
+    id: 5,
+    img: "/assets/review5.jpg",
+    title: "Hammed",
+    star: faStar,
+    msg: "The therapists and doctors on Ask Zara are amazing. Booking an appointment is easy, and I finally feel like I’m making progress in taking care of my mental health. It’s comforting to know there’s always someone I can reach out to."
+  },
+  {
+    id: 6,
+    img: "/assets/review6.jpg",
+    title: "Omotola",
+    star: faStar,
+    msg: "I was hesitant to reach out for support, but Ask Zara made it simple and welcoming. The live chat, resources, and supportive community make it feel like a safe space. I feel empowered and encouraged every time I visit the platform."
   }
 ]

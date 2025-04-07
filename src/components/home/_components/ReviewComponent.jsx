@@ -1,4 +1,6 @@
 import React from "react";
+import { ReviewCard } from "./_component/ReviewCard";
+import { reviewData } from "../../../constant/data";
 
 export const ReviewComponent = () => {
   return (
@@ -19,7 +21,13 @@ export const ReviewComponent = () => {
             students like you are finding support and community with Ask Zara.
           </p>
         </div>
-        <div></div>
+        <div className="w-[93%] 2xl:w-[63%] mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[1.5rem] mb-[3rem] w-full">
+            {reviewData.map((info) => (
+              <ReviewCard key={info.id} cardInfo={info} />
+            ))}
+          </div>
+        </div>
       </div>
     </>
   );
