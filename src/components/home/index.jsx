@@ -5,6 +5,7 @@ import { MoodSelectComponent } from "./_components/MoodSelectComponent";
 import { TipsComponent } from "./_components/TipsComponent";
 import { TherapistDoctor } from "./_components/TherapistDoctor";
 import { ReviewComponent } from "./_components/ReviewComponent";
+import { BeginsHereComponent } from "./_components/BeginsHereComponent";
 
 export const Home = () => {
   return (
@@ -15,6 +16,7 @@ export const Home = () => {
       <TipsComponent />
       <TherapistDoctor />
       <ReviewComponent />
+      <BeginsHereComponent />
     </div>
   );
 };

@@ -1,11 +1,13 @@
 import React from "react";
 import { ReviewCard } from "./_component/ReviewCard";
 import { reviewData } from "../../../constant/data";
+import { faArrowLeft, faArrowRight } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export const ReviewComponent = () => {
   return (
     <>
-      <div className="bg-[#fbd9cd]">
+      <div className="bg-[#fbd9cd] pb-[2rem]">
         <div className="w-[48%] 2xl:w-[35%] mx-auto text-center py-[1.7rem]">
           <div className="flex items-center justify-center gap-2">
             <div className="w-[3%] h-[0.1rem] bg-[#000]"></div>
@@ -27,6 +29,14 @@ export const ReviewComponent = () => {
               <ReviewCard key={info.id} cardInfo={info} />
             ))}
           </div>
+        </div>
+        <div className="flex justify-center items-center gap-[1rem]">
+          <button className="bg-[#ff6e60] px-[1.2rem] py-[0.5rem] flex justify-center items-center cursor-pointer">
+            <FontAwesomeIcon icon={faArrowLeft} className="" />
+          </button>
+          <button className="bg-[#ff6e60] px-[1.2rem] py-[0.5rem] flex justify-center items-center cursor-pointer">
+            <FontAwesomeIcon icon={faArrowRight} className="" />
+          </button>
         </div>
       </div>
     </>
