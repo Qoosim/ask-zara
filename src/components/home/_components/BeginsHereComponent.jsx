@@ -3,7 +3,7 @@ import React from "react";
 export const BeginsHereComponent = () => {
   return (
     <>
-      <div className="relative w-full h-[32rem]">
+      <div className="relative w-full h-[27rem]">
         <div className="absolute inset-0 bg-[#f7b4b2cc] opacity-85 z-0"></div>
         <img
           src="/assets/loginimage.jpg"
@@ -22,13 +22,13 @@ export const BeginsHereComponent = () => {
           </p>
           <div className="flex items-center gap-[2rem]">
             <button
-              className="bg-[#fff] text-[#000] w-[9rem] py-[0.5rem] rounded-[2rem] outline-2 outline-[#ff6e60] shadow-2xl"
+              className="bg-[#fff] text-[#000] w-[9rem] py-[0.5rem] rounded-[2rem] outline-2 outline-[#ff6e60] shadow-2xl cursor-pointer"
               role="button"
             >
               Login
             </button>
             <button
-              className="bg-[#ff6e60] text-[#fff] w-[9rem] py-[0.5rem] rounded-[2rem] shadow-2xl"
+              className="bg-[#ff6e60] text-[#fff] w-[9rem] py-[0.5rem] rounded-[2rem] shadow-2xl cursor-pointer"
               role="button"
             >
               Sign Up

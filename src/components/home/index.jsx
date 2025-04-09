@@ -6,6 +6,7 @@ import { TipsComponent } from "./_components/TipsComponent";
 import { TherapistDoctor } from "./_components/TherapistDoctor";
 import { ReviewComponent } from "./_components/ReviewComponent";
 import { BeginsHereComponent } from "./_components/BeginsHereComponent";
+import { FooterComponent } from "./_components/FooterComponent";
 
 export const Home = () => {
   return (
@@ -17,6 +18,7 @@ export const Home = () => {
       <TherapistDoctor />
       <ReviewComponent />
       <BeginsHereComponent />
+      <FooterComponent />
     </div>
   );
 };
