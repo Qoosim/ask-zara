@@ -1,8 +1,39 @@
-import React from "react";
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import { faEye } from "@fortawesome/free-solid-svg-icons";
 import { faEyeSlash } from "@fortawesome/free-solid-svg-icons";
+import { useSelector, useDispatch } from "react-redux";
+import { ErrorMessage } from "../../utils/messages/error-message";
+import { useForm } from "react-hook-form";
+import { yupResolver } from "@hookform/resolvers/yup";
+import { signupSchema } from "../../utils/validations";
 
 export const Signup = () => {
+  const [showPassword, setShowPassword] = useState(false);
+  const { error, isLoading } = useSelector((state) => state.user);
+
+  const {
+    reset,
+    register,
+    handleSubmit,
+    setValue,
+    formState: { errors },
+  } = useForm({
+    defaultValues: {
+      fullname: "",
+      email: "",
+      description: "",
+      role: "",
+      phone: "",
+      gender: "",
+      password: "",
+    },
+
+    resolver: yupResolver(signupSchema),
+  });
+
+  const onSubmit = (data) => signUp(data, router, reset);
+
   return (
     <section className="relative w-full h-screen">
       <div className="absolute inset-0 bg-[#f7b4b2cc] opacity-85 z-0"></div>
