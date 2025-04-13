@@ -36,7 +36,7 @@ export const Headers = () => {
               Login
             </li>
           </NavLink>
-          <NavLink to="/register">
+          <NavLink to="/signup">
             <li className="bg-[#ff6f61] px-[1.2rem] py-[0.3rem] rounded-md text-[#fff]">
               Sign Up
             </li>

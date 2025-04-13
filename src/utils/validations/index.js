@@ -18,14 +18,6 @@ export const signupSchema = yup.object({
       "Password must include at least one symbol"
     )
     .required("Password is required"),
-  // phone: yup
-  //   .string()
-  //   .min(11, "Phone number must be at least 10 characters")
-  //   .matches(
-  //     /^0\d{10}$/,
-  //     "Phone number must start with '0' and be 11 digits long"
-  //   )
-  //   .required("Phone number is required"),
 });
 
 export const formValidationSchema = yup.object({
@@ -81,10 +73,9 @@ export const formValidationSchema = yup.object({
 })
 
 export const loginSchema = yup.object({
-  email: yup
+  matric_number: yup
     .string()
-    .email("Invalid email address")
-    .required("Email is required"),
+    .required("Matric Number is required"),
   password: yup
     .string()
     .min(8, "Password must be at least 8 characters")

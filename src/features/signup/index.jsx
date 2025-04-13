@@ -50,7 +50,7 @@ export const Signup = () => {
               type="text"
               id="fullname"
               placeholder="Full Name"
-              className="p-2 bg-[#eef1f1] rounded-md focus:outline-none focus:ring-1 focus:ring-slate-300 focus:border-transparent border-none w-full placeholder:text-[#504e4e] text-[#000]"
+              className="p-2 bg-[#eef1f1] rounded-md focus:outline-none focus:ring-1 focus:ring-[#ed6d5e] focus:border-transparent border-none w-full placeholder:text-[#504e4e] text-[#000]"
               {...register("fullname")}
             />
             {errors.fullname?.message && (
@@ -60,7 +60,7 @@ export const Signup = () => {
               type="email"
               id="email"
               placeholder="Email Address"
-              className="p-2 bg-[#eef1f1] rounded-md focus:outline-none focus:ring-1 focus:ring-slate-300 focus:border-transparent border-none w-full placeholder:text-[#504e4e] text-[#000]"
+              className="p-2 bg-[#eef1f1] rounded-md focus:outline-none focus:ring-1 focus:ring-[#ed6d5e] focus:border-transparent border-none w-full placeholder:text-[#504e4e] text-[#000]"
               {...register("email")}
             />
             {errors.email?.message && (
@@ -70,7 +70,7 @@ export const Signup = () => {
               type="text"
               id="matric_number"
               placeholder="Matric Number"
-              className="p-2 bg-[#eef1f1] rounded-md focus:outline-none focus:ring-1 focus:ring-slate-300 focus:border-transparent border-none w-full placeholder:text-[#504e4e] text-[#000]"
+              className="p-2 bg-[#eef1f1] rounded-md focus:outline-none focus:ring-1 focus:ring-[#ed6d5e] focus:border-transparent border-none w-full placeholder:text-[#504e4e] text-[#000]"
               {...register("matric_number")}
             />
             {errors.matric_number?.message && (
@@ -80,7 +80,7 @@ export const Signup = () => {
               type="text"
               id="level"
               placeholder="Level"
-              className="p-2 bg-[#eef1f1] rounded-md focus:outline-none focus:ring-1 focus:ring-slate-300 focus:border-transparent border-none w-full placeholder:text-[#504e4e] text-[#000]"
+              className="p-2 bg-[#eef1f1] rounded-md focus:outline-none focus:ring-1 focus:ring-[#ed6d5e] focus:border-transparent border-none w-full placeholder:text-[#504e4e] text-[#000]"
               {...register("level")}
             />
             {errors.level?.message && (
@@ -91,7 +91,7 @@ export const Signup = () => {
                 type={showPassword ? "text" : "password"}
                 id="password"
                 placeholder="Password"
-                className="p-2 bg-[#eef1f1] rounded-md focus:outline-none focus:ring-1 focus:ring-slate-300 focus:border-transparent border-none w-full pr-10 placeholder:text-[#504e4e] text-[#000]"
+                className="p-2 bg-[#eef1f1] rounded-md focus:outline-none focus:ring-1 focus:ring-[#ed6d5e] focus:border-transparent border-none w-full pr-10 placeholder:text-[#504e4e] text-[#000]"
                 {...register("password")}
               />
               <button
@@ -155,12 +155,9 @@ export const Signup = () => {
                 </Link>
               </div>
               <div className="font-telex text-sm sm:text-base text-center font-medium">
-                Don&apos;t an account?{" "}
-                <Link
-                  href={`/signup`}
-                  className="hover:opacity-60 text-[#ed6d5e]"
-                >
-                  Sign up
+                Already have an account?{" "}
+                <Link to={`/login`} className="hover:opacity-60 text-[#ed6d5e]">
+                  Login
                 </Link>
               </div>
             </div>

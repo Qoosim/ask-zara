@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export const BeginsHereComponent = () => {
   return (
@@ -20,20 +21,18 @@ export const BeginsHereComponent = () => {
             favorite resources, and keep track of your progress. At Ask Zara,
             we’re ready to be your partner in well-being.
           </p>
-          <div className="flex items-center gap-[2rem]">
-            <button
-              className="bg-[#fff] text-[#000] w-[9rem] py-[0.5rem] rounded-[2rem] outline-2 outline-[#ff6e60] shadow-2xl cursor-pointer"
-              role="button"
-            >
-              Login
-            </button>
-            <button
-              className="bg-[#ff6e60] text-[#fff] w-[9rem] py-[0.5rem] rounded-[2rem] shadow-2xl cursor-pointer"
-              role="button"
-            >
-              Sign Up
-            </button>
-          </div>
+          <ul className="flex items-center gap-[2rem]">
+            <Link to={`/login`}>
+              <li className="bg-[#fff] text-[#000] w-[9rem] py-[0.5rem] rounded-[2rem] outline-2 outline-[#ff6e60] shadow-2xl cursor-pointer text-center">
+                Login
+              </li>
+            </Link>
+            <Link to={`/signup`}>
+              <li className="bg-[#ff6e60] text-[#fff] w-[9rem] py-[0.5rem] rounded-[2rem] shadow-2xl cursor-pointer text-center">
+                Sign Up
+              </li>
+            </Link>
+          </ul>
         </div>
       </div>
     </>

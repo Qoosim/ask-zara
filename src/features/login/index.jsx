@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEye } from "@fortawesome/free-solid-svg-icons";
 import { faEyeSlash } from "@fortawesome/free-solid-svg-icons";
 import { useSelector, useDispatch } from "react-redux";
@@ -17,9 +18,6 @@ export const Login = () => {
   const {
     register,
     handleSubmit,
-    setError,
-    getValues,
-    clearErrors,
     formState: { errors, isSubmitting },
   } = useForm({
     defaultValues: {
@@ -42,14 +40,14 @@ export const Login = () => {
       <div className="max-w-[90%] sm:max-w-[70%] mx-auto w-[85%] sm:w-[60%] lg:w-[43%] z-20 absolute left-1/2 transform -translate-x-1/2 top-40">
         <form
           onSubmit={handleSubmit(onSubmit)}
-          className="bg-[#434b51] p-10 rounded-lg"
+          className="bg-[#fff] p-10 rounded-lg"
         >
           <div className="flex flex-col gap-5">
             <input
               type="text"
               id="matric_number"
               placeholder="Matric Number"
-              className="p-2 bg-[#eef1f1] rounded-md focus:outline-none focus:ring-1 focus:ring-slate-300 focus:border-transparent border-none w-full placeholder:text-[#504e4e] text-[#000]"
+              className="p-2 bg-[#eef1f1] rounded-md focus:outline-none focus:ring-1 focus:ring-[#ed6d5e] focus:border-transparent border-none w-full placeholder:text-[#504e4e] text-[#000]"
               {...register("matric_number")}
             />
             {errors.matric_number?.message && (
@@ -60,7 +58,7 @@ export const Login = () => {
                 type={showPassword ? "text" : "password"}
                 id="password"
                 placeholder="Password"
-                className="p-2 bg-[#eef1f1] rounded-md focus:outline-none focus:ring-1 focus:ring-slate-300 focus:border-transparent border-none w-full pr-10 placeholder:text-[#504e4e] text-[#000]"
+                className="p-2 bg-[#eef1f1] rounded-md focus:outline-none focus:ring-1 focus:ring-[#ed6d5e] focus:border-transparent border-none w-full pr-10 placeholder:text-[#504e4e] text-[#000]"
                 {...register("password")}
               />
               <button
@@ -69,9 +67,12 @@ export const Login = () => {
                 className="absolute right-0 mr-3"
               >
                 {showPassword ? (
-                  <faEye className="text-slate-300" />
+                  <FontAwesomeIcon icon={faEye} className="text-slate-400" />
                 ) : (
-                  <faEyeSlash className="text-slate-300" />
+                  <FontAwesomeIcon
+                    icon={faEyeSlash}
+                    className="text-slate-400"
+                  />
                 )}
               </button>
             </div>
@@ -81,7 +82,7 @@ export const Login = () => {
             <button
               type="submit"
               disabled={isLoading}
-              className="bg-[#117031] w-full p-2 rounded-md text-white font-semibold hover:opacity-80"
+              className="bg-[#ed6d5e] w-full p-2 rounded-md text-white font-semibold hover:opacity-80 cursor-pointer"
             >
               {isSubmitting ? (
                 <div className="flex justify-center items-center">
@@ -108,13 +109,13 @@ export const Login = () => {
                   Processing...
                 </div>
               ) : (
-                "Sign In"
+                "Login"
               )}
             </button>
             <div className="flex justify-between items-center w-full mt-3 text-slate-400">
               <div className="font-telex text-sm sm:text-base text-center font-medium">
                 <Link
-                  href={`/forgot-password`}
+                  to={`/forgot-password`}
                   className="hover:opacity-60 cursor-pointer"
                 >
                   Forgot Password
@@ -123,8 +124,8 @@ export const Login = () => {
               <div className="font-telex text-sm sm:text-base text-center font-medium">
                 Don&apos;t an account?{" "}
                 <Link
-                  href={`/signup`}
-                  className="hover:opacity-60 text-[#4dd379]"
+                  to={`/signup`}
+                  className="hover:opacity-60 text-[#ed6d5e]"
                 >
                   Sign up
                 </Link>
