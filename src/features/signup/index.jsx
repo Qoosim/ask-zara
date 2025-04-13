@@ -1,38 +1,36 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import { faEye } from "@fortawesome/free-solid-svg-icons";
-import { faEyeSlash } from "@fortawesome/free-solid-svg-icons";
+import { Link, useNavigate } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faEye, faEyeSlash } from "@fortawesome/free-solid-svg-icons";
 import { useSelector, useDispatch } from "react-redux";
 import { ErrorMessage } from "../../utils/messages/error-message";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { signupSchema } from "../../utils/validations";
+import { signUp } from "../../redux/auth/actions";
 
 export const Signup = () => {
   const [showPassword, setShowPassword] = useState(false);
-  const { error, isLoading } = useSelector((state) => state.user);
+  const { isLoading } = useSelector((state) => state.user);
+  const navigate = useNavigate();
 
   const {
     reset,
     register,
     handleSubmit,
-    setValue,
-    formState: { errors },
+    formState: { errors, isSubmitting },
   } = useForm({
     defaultValues: {
       fullname: "",
       email: "",
-      description: "",
-      role: "",
-      phone: "",
-      gender: "",
+      matric_number: "",
+      level: "",
       password: "",
     },
-
     resolver: yupResolver(signupSchema),
   });
 
-  const onSubmit = (data) => signUp(data, router, reset);
+  const onSubmit = (data) => signUp(data, navigate, reset);
 
   return (
     <section className="relative w-full h-screen">
@@ -42,28 +40,58 @@ export const Signup = () => {
         alt="Login Image"
         className="w-full h-full object-cover"
       />
-      <div className="max-w-[90%] sm:max-w-[70%] mx-auto w-[85%] sm:w-[60%] lg:w-[43%] z-20 absolute left-1/2 transform -translate-x-1/2 top-32">
+      <div className="max-w-[90%] sm:max-w-[70%] mx-auto w-[85%] sm:w-[60%] lg:w-[38%] z-20 absolute left-1/2 transform -translate-x-1/2 top-28 h-[80vh] overflow-y-auto scroll-hidden">
         <form
           onSubmit={handleSubmit(onSubmit)}
-          className="bg-[#434b51] p-10 rounded-lg"
+          className="bg-[#fff] p-10 rounded-lg"
         >
           <div className="flex flex-col gap-5">
+            <input
+              type="text"
+              id="fullname"
+              placeholder="Full Name"
+              className="p-2 bg-[#eef1f1] rounded-md focus:outline-none focus:ring-1 focus:ring-slate-300 focus:border-transparent border-none w-full placeholder:text-[#504e4e] text-[#000]"
+              {...register("fullname")}
+            />
+            {errors.fullname?.message && (
+              <ErrorMessage message={errors.fullname.message} />
+            )}
             <input
               type="email"
               id="email"
               placeholder="Email Address"
-              className="p-2 bg-[#737c7d] rounded-md focus:outline-none focus:ring-1 focus:ring-slate-300 focus:border-transparent border-none w-full placeholder:text-slate-300 text-[#fff]"
+              className="p-2 bg-[#eef1f1] rounded-md focus:outline-none focus:ring-1 focus:ring-slate-300 focus:border-transparent border-none w-full placeholder:text-[#504e4e] text-[#000]"
               {...register("email")}
             />
             {errors.email?.message && (
               <ErrorMessage message={errors.email.message} />
+            )}
+            <input
+              type="text"
+              id="matric_number"
+              placeholder="Matric Number"
+              className="p-2 bg-[#eef1f1] rounded-md focus:outline-none focus:ring-1 focus:ring-slate-300 focus:border-transparent border-none w-full placeholder:text-[#504e4e] text-[#000]"
+              {...register("matric_number")}
+            />
+            {errors.matric_number?.message && (
+              <ErrorMessage message={errors.matric_number.message} />
+            )}
+            <input
+              type="text"
+              id="level"
+              placeholder="Level"
+              className="p-2 bg-[#eef1f1] rounded-md focus:outline-none focus:ring-1 focus:ring-slate-300 focus:border-transparent border-none w-full placeholder:text-[#504e4e] text-[#000]"
+              {...register("level")}
+            />
+            {errors.level?.message && (
+              <ErrorMessage message={errors.level.message} />
             )}
             <div className="relative flex items-center">
               <input
                 type={showPassword ? "text" : "password"}
                 id="password"
                 placeholder="Password"
-                className="p-2 bg-[#737c7d] rounded-md focus:outline-none focus:ring-1 focus:ring-slate-300 focus:border-transparent border-none w-full pr-10 placeholder:text-slate-300 text-[#fff]"
+                className="p-2 bg-[#eef1f1] rounded-md focus:outline-none focus:ring-1 focus:ring-slate-300 focus:border-transparent border-none w-full pr-10 placeholder:text-[#504e4e] text-[#000]"
                 {...register("password")}
               />
               <button
@@ -72,9 +100,12 @@ export const Signup = () => {
                 className="absolute right-0 mr-3"
               >
                 {showPassword ? (
-                  <faEye className="text-slate-300" />
+                  <FontAwesomeIcon icon={faEye} className="text-slate-400" />
                 ) : (
-                  <faEyeSlash className="text-slate-300" />
+                  <FontAwesomeIcon
+                    icon={faEyeSlash}
+                    className="text-slate-400"
+                  />
                 )}
               </button>
             </div>
@@ -84,7 +115,7 @@ export const Signup = () => {
             <button
               type="submit"
               disabled={isLoading}
-              className="bg-[#117031] w-full p-2 rounded-md text-white font-semibold hover:opacity-80"
+              className="bg-[#ed6d5e] w-full p-2 rounded-md text-white font-semibold cursor-pointer hover:opacity-80"
             >
               {isSubmitting ? (
                 <div className="flex justify-center items-center">
@@ -111,7 +142,7 @@ export const Signup = () => {
                   Processing...
                 </div>
               ) : (
-                "Sign In"
+                "Register"
               )}
             </button>
             <div className="flex justify-between items-center w-full mt-3 text-slate-400">
@@ -127,7 +158,7 @@ export const Signup = () => {
                 Don&apos;t an account?{" "}
                 <Link
                   href={`/signup`}
-                  className="hover:opacity-60 text-[#4dd379]"
+                  className="hover:opacity-60 text-[#ed6d5e]"
                 >
                   Sign up
                 </Link>

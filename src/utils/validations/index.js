@@ -6,7 +6,8 @@ export const signupSchema = yup.object({
     .string()
     .email("Invalid email address")
     .required("Email is required"),
-  description: yup.string().required("Please state your need"),
+  matric_number: yup.string().required("Matric Number is required"),
+  level: yup.string().required("Please, select a level"),
   password: yup
     .string()
     .min(8, "Password must be at least 8 characters")
@@ -17,16 +18,14 @@ export const signupSchema = yup.object({
       "Password must include at least one symbol"
     )
     .required("Password is required"),
-  gender: yup.string().required("Gender is required"),
-  role: yup.string().required("Please select your role"),
-  phone: yup
-    .string()
-    .min(11, "Phone number must be at least 10 characters")
-    .matches(
-      /^0\d{10}$/,
-      "Phone number must start with '0' and be 11 digits long"
-    )
-    .required("Phone number is required"),
+  // phone: yup
+  //   .string()
+  //   .min(11, "Phone number must be at least 10 characters")
+  //   .matches(
+  //     /^0\d{10}$/,
+  //     "Phone number must start with '0' and be 11 digits long"
+  //   )
+  //   .required("Phone number is required"),
 });
 
 export const formValidationSchema = yup.object({
