@@ -7,6 +7,7 @@ import { Login } from "./features/login";
 import { Resources } from "./components/resources";
 import { Chat } from "./components/chat";
 import { TherapistAndDoctor } from "./components/therapistAndDoc";
+import { SupportGroup } from "./components/supportGroup";
 
 export const App = () => {
   return (
@@ -19,6 +20,7 @@ export const App = () => {
           <Route path="/resources" element={<Resources />} />
           <Route path="/chat" element={<Chat />} />
           <Route path="/therapist" element={<TherapistAndDoctor />} />
+          <Route path="/support" element={<SupportGroup />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/login" element={<Login />} />
         </Routes>

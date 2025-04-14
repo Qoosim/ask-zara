@@ -1,6 +1,4 @@
 import React from "react";
-import { TipsCard } from "../home/_components/_component/TipsCard";
-import { tipsData } from "../../constant/data";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleRight } from "@fortawesome/free-solid-svg-icons";
 
