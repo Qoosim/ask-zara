@@ -6,6 +6,10 @@ import { faFaceFrownOpen } from "@fortawesome/free-solid-svg-icons";
 import { faFaceSmileBeam } from "@fortawesome/free-solid-svg-icons";
 import { faFaceSmile } from "@fortawesome/free-solid-svg-icons";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
+import { faHandsHoldingCircle } from "@fortawesome/free-solid-svg-icons";
+import { faUserShield } from "@fortawesome/free-solid-svg-icons";
+import { faUniversalAccess } from "@fortawesome/free-solid-svg-icons";
+import { faChartLine } from "@fortawesome/free-solid-svg-icons";
 
 
 export const tabTexts = [
@@ -170,4 +174,31 @@ export const reviewData = [
     star: faStar,
     msg: "I was hesitant to reach out for support, but Ask Zara made it simple and welcoming. The live chat, resources, and supportive community make it feel like a safe space. I feel empowered and encouraged every time I visit the platform."
   }
+]
+
+export const aboutUsCardInfo = [
+  {
+    id: 1,
+    img: faHandsHoldingCircle,
+    title: "Empathy",
+    content: "We believe that understanding and compassion are essential in creating a supportive mental health community."
+  },
+  {
+    id: 2,
+    img: faUserShield,
+    title: "Accessibility",
+    content: "Our goal is to make mental health resources and support available to all students, regardless of background, location, or financial situation."
+  },
+  {
+    id: 3,
+    img: faUniversalAccess,
+    title: "Trustworthiness",
+    content: "Building trust is at the core of everything we do. We are committed to upholding high standards of professionalism, reliability, and transparency, ensuring that our users can rely on us for safe and trustworthy support."
+  },
+  {
+    id: 4,
+    img: faChartLine,
+    title: "Innovation",
+    content: "We embrace innovation as a pathway to improving mental health care for students. By leveraging technology and actively seeking user feedback, we are committed to enhancing our platform continuously."
+  },
 ]

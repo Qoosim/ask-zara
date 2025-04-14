@@ -37,7 +37,7 @@ export const Login = () => {
         alt="Login Image"
         className="w-full h-full object-cover"
       />
-      <div className="max-w-[90%] sm:max-w-[70%] mx-auto w-[85%] sm:w-[60%] lg:w-[43%] z-20 absolute left-1/2 transform -translate-x-1/2 top-40">
+      <div className="max-w-[90%] sm:max-w-[70%] mx-auto w-[85%] sm:w-[60%] lg:w-[37%] z-20 absolute left-1/2 transform -translate-x-1/2 top-40">
         <form
           onSubmit={handleSubmit(onSubmit)}
           className="bg-[#fff] p-10 rounded-lg"
