@@ -16,6 +16,7 @@
     "@hookform/resolvers": "^5.0.1",
     "@reduxjs/toolkit": "^2.6.1",
     "@tailwindcss/postcss": "^4.0.12",
+    "js-cookies": "^1.0.4",
     "postcss": "^8.5.3",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",

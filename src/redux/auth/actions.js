@@ -1,3 +1,7 @@
+import Cookies from 'js-cookie';
+import { store } from '../store';
+
+
 export const signUp = async (data, navigate, reset) => {
     const dispatch = store.dispatch;
     dispatch(setIsLoading(true));
@@ -54,3 +58,34 @@ export const login = async (data, navigate) => {
       alertNotification(error?.response?.data?.message, "error");
     }
   };
+
+
+export const saveCookie = (name, value) => {
+  if (typeof value !== "string") {
+    const newVale = JSON.stringify(value);
+    Cookies.set(name, newVale);
+  } else {
+      Cookies.set(name, value);
+  }
+};
+  
+export const getCookie = (name) => {
+  let value;
+  const jsonString = Cookies.get(name);
+  try {
+    if (typeof jsonString === "string") {
+      const jsonObject = JSON.parse(jsonString);
+      value = jsonObject;
+    }
+  } catch (error) {
+    value = jsonString;
+  }
+  return value;
+};
+
+export const signOut = () => {
+  return async (dispatch) => {
+    dispatch({ type: "RESET" });
+    Cookies.remove("userData");
+  };
+};
