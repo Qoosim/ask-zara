@@ -40,7 +40,7 @@ export const Signup = () => {
         alt="Login Image"
         className="w-full h-full object-cover"
       />
-      <div className="max-w-[90%] sm:max-w-[70%] mx-auto w-[85%] sm:w-[60%] lg:w-[38%] z-20 absolute left-1/2 transform -translate-x-1/2 top-28 h-[80vh] overflow-y-auto scroll-hidden">
+      <div className="max-w-[90%] sm:max-w-[70%] mx-auto w-[85%] sm:w-[60%] lg:w-[38%] z-20 absolute left-1/2 transform -translate-x-1/2 top-24 sm:top-28 h-[80vh] rounded-lg overflow-y-auto scroll-hidden">
         <form
           onSubmit={handleSubmit(onSubmit)}
           className="bg-[#fff] p-10 rounded-lg"
@@ -145,16 +145,8 @@ export const Signup = () => {
                 "Register"
               )}
             </button>
-            <div className="flex justify-between items-center w-full mt-3 text-slate-400">
-              <div className="font-telex text-sm sm:text-base text-center font-medium">
-                <Link
-                  href={`/forgot-password`}
-                  className="hover:opacity-60 cursor-pointer"
-                >
-                  Forgot Password
-                </Link>
-              </div>
-              <div className="font-telex text-sm sm:text-base text-center font-medium">
+            <div className="flex justify-end items-center w-full text-slate-400">
+              <div className="font-montserrat text-[0.7rem] sm:text-base text-center font-medium">
                 Already have an account?{" "}
                 <Link to={`/login`} className="hover:opacity-60 text-[#ed6d5e]">
                   Login

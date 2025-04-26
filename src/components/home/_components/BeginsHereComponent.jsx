@@ -12,7 +12,7 @@ export const BeginsHereComponent = () => {
           className="w-full h-full object-cover"
         />
 
-        <div className="flex flex-col items-center gap-[2rem] w-[37%] 2xl:w-[27%] mx-auto absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2">
+        <div className="flex flex-col items-center gap-[2rem] w-[75%] md:w-[37%] 2xl:w-[27%] mx-auto absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2">
           <h2 className="text-[#000] text-[1.5rem] font-lato-bold">
             Your Journey Begins Here
           </h2>

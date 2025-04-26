@@ -112,8 +112,8 @@ export const Login = () => {
                 "Login"
               )}
             </button>
-            <div className="flex justify-between items-center w-full mt-3 text-slate-400">
-              <div className="font-telex text-sm sm:text-base text-center font-medium">
+            <div className="flex justify-between items-center w-full text-slate-400">
+              <div className="font-montserrat text-[0.7rem] sm:text-base text-center font-medium">
                 <Link
                   to={`/forgot-password`}
                   className="hover:opacity-60 cursor-pointer"
@@ -121,7 +121,7 @@ export const Login = () => {
                   Forgot Password
                 </Link>
               </div>
-              <div className="font-telex text-sm sm:text-base text-center font-medium">
+              <div className="font-montserrat text-[0.7rem] sm:text-base text-center font-medium">
                 Don&apos;t an account?{" "}
                 <Link
                   to={`/signup`}

@@ -10,16 +10,17 @@ export const About = () => {
           <h1 className="text-center text-[1.8rem] font-lato-bold text-[#ed6c5f] mb-[1.5rem]">
             About Us
           </h1>
-          <h3 className="text-center text-[#000] font-lato-bold text-[2rem] mb-[1rem]">
+          <h3 className="text-center text-[#000] font-lato-bold text-[1.4rem] sm:text-[2rem] mb-[1rem]">
             Welcome to Ask Zara
           </h3>
           <p className="text-[#000] text-[0.9rem] font-montserrat">
-            At Ask Zara, we’re dedicated to creating a supportive space where
-            you can find the resources, guidance, and community you need to
-            manage mental health and emotional challenges. Life as a student can
-            be overwhelming, and finding support should be simple, accessible,
-            and private. Here, you’re free to be yourself and take steps towards
-            feeling better, all in an environment built just for you.
+            At Ask Zara, we&apos;re dedicated to creating a supportive space
+            where you can find the resources, guidance, and community you need
+            to manage mental health and emotional challenges. Life as a student
+            can be overwhelming, and finding support should be simple,
+            accessible, and private. Here, you&apos;re free to be yourself and
+            take steps towards feeling better, all in an environment built just
+            for you.
           </p>
           <div className="mb-[1.5rem] flex flex-col gap-[0.5rem] mt-[1.5rem]">
             <span className="text-[#000] font-lato-bold text-[1.2rem]">
@@ -40,12 +41,12 @@ export const About = () => {
               Why We Care
             </span>
             <p>
-              Mental health struggles can feel isolating, but they don’t have to
-              be. At Ask Zara, we’re committed to reducing the stigma around
-              mental health by creating a welcoming, judgment-free space.
-              Whether you’re reaching out to a counselor or connecting with
-              fellow students, we’re here to empower you to take control of your
-              well-being.
+              Mental health struggles can feel isolating, but they don&apos;t
+              have to be. At Ask Zara, we&apos;re committed to reducing the
+              stigma around mental health by creating a welcoming, judgment-free
+              space. Whether you&apos;re reaching out to a counselor or
+              connecting with fellow students, we&apos;re here to empower you to
+              take control of your well-being.
             </p>
           </div>
           <div className="mb-[1.5rem] flex flex-col gap-[0.5rem]">
@@ -55,7 +56,7 @@ export const About = () => {
             <p>
               Compassion, privacy, and accessibility are at the heart of
               everything we do. We believe every student deserves a space where
-              they feel safe, respected, and supported, no matter where they’re
+              they feel safe, respected, and supported, no matter where they&apos;re
               at in their journey.
             </p>
           </div>
@@ -65,7 +66,7 @@ export const About = () => {
             ))}
           </div>
           <p className="text-[#000] font-lato-bold text-[1.2rem] text-center mt-[1.5rem]">
-            Ask Zara is more than just a platform; it’s a community-driven space
+            Ask Zara is more than just a platform; it&apos;s a community-driven space
             where students can connect, share experiences, and find help from
             peers and professionals alike.
           </p>

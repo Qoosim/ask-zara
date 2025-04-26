@@ -8,7 +8,7 @@ export const TipsComponent = () => {
   return (
     <>
       <section className="bg-[#fcd8cd] pb-[3rem]">
-        <div className="w-[48%] 2xl:w-[35%] mx-auto text-center py-[1.7rem]">
+        <div className="w-[90%] md:w-[48%] 2xl:w-[35%] mx-auto text-center py-[1.7rem]">
           <h2 className="text-[1.8rem] font-lato-bold text-[#000]">
             Explore Helpful Reads & Tips
           </h2>

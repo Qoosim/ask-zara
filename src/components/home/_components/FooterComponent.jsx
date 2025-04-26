@@ -5,7 +5,7 @@ export const FooterComponent = () => {
     <>
       <div className="bg-[#fcd8cd]">
         <div className="w-[90%] 2xl:w-[65%] mx-auto pt-[2rem] pb-[1rem]">
-          <div className="flex justify-between">
+          <div className="flex flex-col gap-[1.2rem] md:flex-row justify-between">
             <div className="flex flex-col gap-[0.8rem]">
               <img src="/assets/askzaralogo.png" alt="" className="w-[6rem]" />
               <div className="flex flex-col text-[#000] text-[0.9rem]">

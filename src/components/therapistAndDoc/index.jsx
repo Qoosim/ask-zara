@@ -7,10 +7,10 @@ export const TherapistAndDoctor = () => {
     <>
       <div className="w-full min-h-screen bg-[#f6f5dd]">
         <div className="max-w-[90%] sm:max-w-[70%] mx-auto w-[85%] sm:w-[60%] lg:w-[70%] 2xl:w-[44%] z-20 pt-32 pb-20">
-          <h1 className="text-center text-[1.8rem] font-lato-bold text-[#ed6c5f] mb-[1.5rem]">
+          <h1 className="text-center text-[1.6rem] sm:text-[1.8rem] font-lato-bold text-[#ed6c5f] mb-[1.5rem]">
             Therapist and Doctor
           </h1>
-          <h3 className="text-center text-[#000] font-lato-bold text-[1.5rem] mb-[1rem]">
+          <h3 className="text-center text-[#000] font-lato-bold text-[1.2rem] sm:text-[1.5rem] mb-[1rem]">
             Get Professional Support, When You Need It Most
           </h3>
           <p className="text-[#000] text-[0.9rem] font-montserrat">
@@ -27,7 +27,7 @@ export const TherapistAndDoctor = () => {
             className="w-[75%] mx-auto object-cover my-[3rem]"
           />
           <p>
-            Whether you’re facing stress, anxiety, or any other challenges,
+            Whether you&apos;re facing stress, anxiety, or any other challenges,
             these professionals are here to provide the support you need. Ready
             to take the next step, simply click Book an Appointment and you'll
             be directed to a qualified therapist or doctor. This easy access to

@@ -22,7 +22,7 @@ export const Headers = () => {
             className="w-[5.8rem]"
           />
         </NavLink>
-        <ul className="flex justify-center items-center gap-6">
+        <ul className="hidden sm:flex justify-center items-center gap-6">
           {tabTexts.map((nav) => (
             <NavLink
               to={nav.url}
@@ -39,7 +39,7 @@ export const Headers = () => {
             </NavLink>
           ))}
         </ul>
-        <ul className="flex justify-center items-center gap-8 text-[0.8rem] font-semibold font-montserrat">
+        <ul className="hidden sm:flex justify-center items-center gap-8 text-[0.8rem] font-semibold font-montserrat">
           <NavLink to="/login">
             <li className="outline-1 outline-[#ff6f61] px-[1.2rem] py-[0.3rem] rounded-md">
               Login
@@ -56,11 +56,12 @@ export const Headers = () => {
           type="button"
           className="block px-2 sm:hidden"
         >
-          <FontAwesomeIcon icon={faBars} className="text-[1rem]" />
+          <FontAwesomeIcon
+            icon={faBars}
+            className="text-[1.2rem] cursor-pointer"
+          />
         </button>
-        {isMobileNav && (
-          <MobileNav close={onclose} />
-        )}
+        {isMobileNav && <MobileNav close={onClose} />}
       </nav>
     </>
   );
@@ -91,14 +92,14 @@ const MobileNav = ({ close }) => {
             e.stopPropagation();
           }}
           role="button"
-          className="modal swipeIn absolute right-0 top-0 flex h-full w-[75%] flex-col items-start justify-start rounded-tl-2xl border-l bg-white p-6 shadow-lg sm:w-[300px] transition-all duration-500 ease-out"
+          className="modal swipeIn absolute right-0 top-0 flex h-full w-[75%] flex-col gap-[1rem] items-start justify-start rounded-tl-2xl border-l bg-white p-6 shadow-lg sm:w-[300px] transition-all duration-500 ease-in-out"
         >
           <div className="flex w-full flex-col items-start justify-start gap-y-2">
             <div className="flex w-full items-end justify-end">
               <button type="button" onClick={close} className="">
                 <FontAwesomeIcon
-                  icon={faBars}
-                  className="text-[1rem] text-[#000]"
+                  icon={faXmark}
+                  className="text-[1.2rem] text-[#000] cursor-pointer"
                 />
               </button>
             </div>
@@ -109,7 +110,7 @@ const MobileNav = ({ close }) => {
                     close();
                   }}
                   key={item.text}
-                  to={`${item.text}`}
+                  to={`${item.url}`}
                   className="mb-[0.5rem]"
                 >
                   {item.text}
@@ -131,7 +132,7 @@ const MobileNav = ({ close }) => {
                   <button
                     onClick={close}
                     type="button"
-                    className="w-full bg-white px-4 py-3 text-lg font-semibold text-[#7780A1] shadow-inner outline-1"
+                    className="w-full bg-white px-4 py-1.5 text-lg font-semibold text-[#7780A1] shadow-inner outline-1 rounded-4xl"
                   >
                     Login
                   </button>
@@ -140,7 +141,7 @@ const MobileNav = ({ close }) => {
                   <button
                     onClick={close}
                     type="button"
-                    className="w-full bg-[#0c691f] px-4 py-3 text-lg font-semibold text-white shadow-inner"
+                    className="w-full bg-[#ff6f61] px-4 py-1.5 text-lg font-semibold text-white shadow-inner rounded-4xl"
                   >
                     Register
                   </button>

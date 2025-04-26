@@ -11,8 +11,8 @@ export const Chat = () => {
             <h1 className="text-center text-[1.8rem] font-lato-bold text-[#ed6c5f] mb-[1.5rem]">
               Live Chat
             </h1>
-            <h3 className="text-center text-[#000] font-lato-bold text-[2rem] mb-[1rem]">
-              Express How You’re Feeling, Find the Right Support
+            <h3 className="text-center text-[#000] font-lato-bold text-[1.4rem] sm:text-[2rem] mb-[1rem]">
+              Express How You&apos;re Feeling, Find the Right Support
             </h3>
             <p className="text-[#000] text-[0.9rem] font-montserrat">
               Ask Zara’s Live Chat is designed to meet you exactly where you
@@ -36,7 +36,7 @@ export const Chat = () => {
               </p>
             </div>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-[2.5rem] pb-[5rem] max-w-full sm:max-w-full mx-auto w-[85%] sm:w-[60%] lg:w-[90%] 2xl:w-[70%]">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-[2.5rem] pb-[5rem] max-w-full sm:max-w-full mx-auto w-[65%] sm:w-[60%] lg:w-[90%] 2xl:w-[70%]">
             {moodInfo.map((cardInfo) => (
               <MoodCard key={cardInfo.id} cardInfo={cardInfo} />
             ))}

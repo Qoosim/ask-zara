@@ -12,12 +12,12 @@ export const Resources = () => {
           <h1 className="text-center text-[1.8rem] font-lato-bold text-[#ed6c5f] mb-[1.5rem]">
             Resources
           </h1>
-          <h3 className="text-center text-[#000] font-lato-bold text-[2rem] mb-[1rem]">
+          <h3 className="text-center text-[#000] font-lato-bold text-[1.4rem] sm:text-[2rem] mb-[1rem]">
             Explore Topics that Matter to You
           </h3>
           <p className="text-[#000] text-[0.9rem] font-montserrat">
-            Our resources section is where you’ll find articles, guides, and
-            tips that resonate with students just like you. Here, we cover
+            Our resources section is where you&apos;ll find articles, guides,
+            and tips that resonate with students just like you. Here, we cover
             everything from coping with academic stress to building healthy
             habits and balancing life. Each piece is crafted to provide
             practical advice, empower you, and help you understand the mental

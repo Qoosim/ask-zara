@@ -10,7 +10,7 @@ export const SupportMentalHealth = () => {
       <div className="bg-[#fcd8cd]">
         <div className="w-[85%] 2xl:w-[75%] mx-auto grid grid-cols-1 md:grid-cols-2 gap-[6rem] items-center pt-[3rem] pb-[1.5rem]">
           <div>
-            <h1 className="text-[2rem] font-lato-bold">
+            <h1 className="text-[1.6rem] md:text-[2rem] font-lato-bold">
               Supporting Student Mental Health
             </h1>
             <p className="text-[#000] text-[0.9rem] font-normal">
